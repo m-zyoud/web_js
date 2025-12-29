@@ -113,3 +113,17 @@ function loadFromStorage() {
         console.error('Error loading from localStorage:', error);
     }
 }
+
+function showStorageIndicator() {
+    const indicator = document.getElementById('storageIndicator');
+    indicator.textContent = getText('saved');
+    indicator.classList.add('show');
+    setTimeout(() => {
+        indicator.classList.remove('show');
+    }, 2000);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    loadFromStorage();
+    initializeApp();
+}
+);

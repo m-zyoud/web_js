@@ -27,23 +27,32 @@
             <input type="text" id="taskInput" placeholder="Enter your task..." />
             <button onclick="addTask()" id="addBtn">Add new task</button>
         </div>
-        
-         <!-- Tabs -->
-    <div class="tabs">
-      <button id="allTab" class="active" onclick="filterTasks('all')">All</button>
-      <button id="doneTab" onclick="filterTasks('done')">Done</button>
-      <button id="todoTab" onclick="filterTasks('todo')">Todo</button>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button id="allTab" class="active" onclick="filterTasks('all')">All</button>
+            <button id="doneTab" onclick="filterTasks('done')">Done</button>
+            <button id="todoTab" onclick="filterTasks('todo')">Todo</button>
+        </div>
+
+        <div class="task-counter" id="taskCounter"></div>
+
+        <ul id="taskList"></ul>
+
+        <div class="buttons">
+            <button class="blue" onclick="deleteDoneTasks()" id="deleteDoneBtn">Delete Done Tasks</button>
+            <button class="red" onclick="deleteAllTasks()" id="deleteAllBtn">Delete All Tasks</button>
+        </div>
     </div>
 
-    <div class="task-counter" id="taskCounter"></div>
-
-    <ul id="taskList"></ul>
-
-    <div class="buttons">
-      <button class="blue" onclick="deleteDoneTasks()" id="deleteDoneBtn">Delete Done Tasks</button>
-      <button class="red" onclick="deleteAllTasks()" id="deleteAllBtn">Delete All Tasks</button>
+    <!-- Delete Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <button onclick="confirmAction()" id="confirmBtn">Yes</button>
+            <button onclick="closePopup()" id="cancelBtn">Cancel</button>
+        </div>
     </div>
-  </div>
 
 
 </body>

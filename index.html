@@ -5,9 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo Manager</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+    </style>
 </head>
+
 <body>
-    
+
+    <div class="storage-indicator" id="storageIndicator">✓ تم الحفظ</div>
+
+    <div class="container">
+        <div class="header">
+            <h1 id="mainTitle">Todo List <span class="sub-title" id="subTitle">– TodoInput</span></h1>
+            <div class="controls">
+                <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+                <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">العربية</button>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter your task..." />
+            <button onclick="addTask()" id="addBtn">Add new task</button>
+        </div>
+
 </body>
 
 </html>

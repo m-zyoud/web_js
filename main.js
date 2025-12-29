@@ -127,3 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
 }
 );
+
+function initializeApp() {
+    renderTasks();
+    updateActiveTab();
+    updateLanguage();
+    updateTheme();
+    document.getElementById('taskInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') addTask();
+    });
+    document.getElementById('renameInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') confirmRename();
+    });
+    window.onclick = function (event) {
+        const popup = document.getElementById('popup');
+        const renamePopup = document.getElementById('renamePopup');
+        if (event.target === popup) closePopup();
+        if (event.target === renamePopup) closeRenamePopup();
+    }
+}

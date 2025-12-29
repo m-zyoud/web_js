@@ -146,3 +146,8 @@ function initializeApp() {
         if (event.target === renamePopup) closeRenamePopup();
     }
 }
+function toggleTheme() {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    updateTheme();
+    saveToStorage();
+}

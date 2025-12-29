@@ -78,3 +78,15 @@ let tasks = [];
 let currentFilter = 'all';
 let actionCallback = null;
 let renameIndex = null;
+
+function saveToStorage() {
+    try {
+        localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(tasks));
+        localStorage.setItem(STORAGE_KEYS.LANGUAGE, currentLanguage);
+        localStorage.setItem(STORAGE_KEYS.THEME, currentTheme);
+        localStorage.setItem(STORAGE_KEYS.FILTER, currentFilter);
+        showStorageIndicator();
+    } catch (error) {
+        console.error('Error saving to localStorage:', error);
+    }
+}

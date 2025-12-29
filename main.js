@@ -78,3 +78,38 @@ let tasks = [];
 let currentFilter = 'all';
 let actionCallback = null;
 let renameIndex = null;
+
+function saveToStorage() {
+    try {
+        localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(tasks));
+        localStorage.setItem(STORAGE_KEYS.LANGUAGE, currentLanguage);
+        localStorage.setItem(STORAGE_KEYS.THEME, currentTheme);
+        localStorage.setItem(STORAGE_KEYS.FILTER, currentFilter);
+        showStorageIndicator();
+    } catch (error) {
+        console.error('Error saving to localStorage:', error);
+    }
+}
+
+function loadFromStorage() {
+    try {
+        const savedTasks = localStorage.getItem(STORAGE_KEYS.TASKS);
+        if (savedTasks) {
+            tasks = JSON.parse(savedTasks);
+        }
+        const savedLanguage = localStorage.getItem(STORAGE_KEYS.LANGUAGE);
+        if (savedLanguage) {
+            currentLanguage = savedLanguage;
+        }
+        const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
+        if (savedTheme) {
+            currentTheme = savedTheme;
+        }
+        const savedFilter = localStorage.getItem(STORAGE_KEYS.FILTER);
+        if (savedFilter) {
+            currentFilter = savedFilter;
+        }
+    } catch (error) {
+        console.error('Error loading from localStorage:', error);
+    }
+}

@@ -146,3 +146,19 @@ function initializeApp() {
         if (event.target === renamePopup) closeRenamePopup();
     }
 }
+function toggleTheme() {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    updateTheme();
+    saveToStorage();
+}
+
+function updateTheme() {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    document.getElementById('themeBtn').textContent = currentTheme === 'light' ? '🌙' : '☀️';
+}
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+    updateLanguage();
+    saveToStorage();
+}

@@ -162,3 +162,27 @@ function toggleLanguage() {
     updateLanguage();
     saveToStorage();
 }
+
+function updateLanguage() {
+    const isArabic = currentLanguage === 'ar';
+    document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', currentLanguage);
+    document.getElementById('langBtn').textContent = isArabic ? 'English' : 'العربية';
+    const t = translations[currentLanguage];
+    document.getElementById('mainTitle').innerHTML = `${t.title} <span class="sub-title">${t.subtitle}</span>`;
+    document.getElementById('taskInput').placeholder = t.inputPlaceholder;
+    document.getElementById('addBtn').textContent = t.addButton;
+    document.getElementById('allTab').textContent = t.allTab;
+    document.getElementById('doneTab').textContent = t.doneTab;
+    document.getElementById('todoTab').textContent = t.todoTab;
+    document.getElementById('deleteDoneBtn').textContent = t.deleteDoneBtn;
+    document.getElementById('deleteAllBtn').textContent = t.deleteAllBtn;
+    document.getElementById('renameTitle').textContent = t.renameTitle;
+    document.getElementById('renameInput').placeholder =
+        t.renamePlaceholder;
+    document.getElementById('renameConfirmBtn').textContent = t.renameBtn;
+    document.getElementById('renameCancelBtn').textContent = t.cancelBtn;
+    document.getElementById('cancelBtn').textContent = t.cancelBtn;
+    document.getElementById('confirmBtn').textContent = t.confirmBtn;
+    renderTasks();
+}

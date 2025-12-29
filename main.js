@@ -156,3 +156,9 @@ function updateTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
     document.getElementById('themeBtn').textContent = currentTheme === 'light' ? '🌙' : '☀️';
 }
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+    updateLanguage();
+    saveToStorage();
+}

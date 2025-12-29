@@ -90,3 +90,26 @@ function saveToStorage() {
         console.error('Error saving to localStorage:', error);
     }
 }
+
+function loadFromStorage() {
+    try {
+        const savedTasks = localStorage.getItem(STORAGE_KEYS.TASKS);
+        if (savedTasks) {
+            tasks = JSON.parse(savedTasks);
+        }
+        const savedLanguage = localStorage.getItem(STORAGE_KEYS.LANGUAGE);
+        if (savedLanguage) {
+            currentLanguage = savedLanguage;
+        }
+        const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
+        if (savedTheme) {
+            currentTheme = savedTheme;
+        }
+        const savedFilter = localStorage.getItem(STORAGE_KEYS.FILTER);
+        if (savedFilter) {
+            currentFilter = savedFilter;
+        }
+    } catch (error) {
+        console.error('Error loading from localStorage:', error);
+    }
+}

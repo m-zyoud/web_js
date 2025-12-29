@@ -28,3 +28,25 @@
     --popup-overlay: rgba(0, 0, 0, 0.7);
     --shadow: rgba(0, 0, 0, 0.3);
 }
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px var(--shadow);
+}

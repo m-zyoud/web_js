@@ -151,3 +151,8 @@ function toggleTheme() {
     updateTheme();
     saveToStorage();
 }
+
+function updateTheme() {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    document.getElementById('themeBtn').textContent = currentTheme === 'light' ? '🌙' : '☀️';
+}

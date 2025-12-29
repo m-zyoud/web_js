@@ -187,3 +187,31 @@ ul#taskList {
     transition: all 0.3s;
     animation: slideIn 0.3s ease;
 }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.task-item:hover {
+    background: var(--task-hover);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.task-item.done {
+    border-left-color: var(--success-color);
+    background: var(--task-done-bg);
+}
+
+.task-item.done span {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}

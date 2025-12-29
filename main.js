@@ -73,3 +73,8 @@ const translations = {
         saved: '✓ تم الحفظ'
     }
 };
+
+let tasks = [];
+let currentFilter = 'all';
+let actionCallback = null;
+let renameIndex = null;

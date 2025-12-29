@@ -1,17 +1,30 @@
 :root {
-      --bg-color: #f0f2f5;
-      --container-bg: #ffffff;
-      --text-color: #333333;
-      --text-muted: #666666;
-      --border-color: #ddd;
-      --primary-color: #0099ff;
-      --primary-hover: #0088dd;
-      --success-color: #28a745;
-      --danger-color: #dc3545;
-      --danger-hover: #c82333;
-      --task-bg: #f8f8f8;
-      --task-hover: #f0f0f0;
-      --task-done-bg: #f0f8f0;
-      --popup-overlay: rgba(0,0,0,0.5);
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
+    --bg-color: #f0f2f5;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --border-color: #ddd;
+    --primary-color: #0099ff;
+    --primary-hover: #0088dd;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --danger-hover: #c82333;
+    --task-bg: #f8f8f8;
+    --task-hover: #f0f0f0;
+    --task-done-bg: #f0f8f0;
+    --popup-overlay: rgba(0, 0, 0, 0.5);
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --text-muted: #cccccc;
+    --border-color: #444;
+    --task-bg: #3a3a3a;
+    --task-hover: #454545;
+    --task-done-bg: #2d3a2d;
+    --popup-overlay: rgba(0, 0, 0, 0.7);
+    --shadow: rgba(0, 0, 0, 0.3);
+}

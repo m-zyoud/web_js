@@ -1,0 +1,17 @@
+:root {
+      --bg-color: #f0f2f5;
+      --container-bg: #ffffff;
+      --text-color: #333333;
+      --text-muted: #666666;
+      --border-color: #ddd;
+      --primary-color: #0099ff;
+      --primary-hover: #0088dd;
+      --success-color: #28a745;
+      --danger-color: #dc3545;
+      --danger-hover: #c82333;
+      --task-bg: #f8f8f8;
+      --task-hover: #f0f0f0;
+      --task-done-bg: #f0f8f0;
+      --popup-overlay: rgba(0,0,0,0.5);
+      --shadow: rgba(0, 0, 0, 0.1);
+    }

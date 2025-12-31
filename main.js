@@ -186,3 +186,10 @@ function updateLanguage() {
     document.getElementById('confirmBtn').textContent = t.confirmBtn;
     renderTasks();
 }
+function getText(key, params = {}) {
+    let text = translations[currentLanguage][key] || key;
+    Object.keys(params).forEach(param => {
+    text = text.replace(`{${param}}`, params[param]);
+  });
+  return text;
+}

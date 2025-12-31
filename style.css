@@ -391,3 +391,27 @@ ul#taskList {
     margin-right: 0;
     margin-left: 16px;
   }
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      margin: 10px;
+      padding: 20px;
+    }
+    
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .controls {
+      justify-content: center;
+    }
+    
+    .input-section {
+      flex-direction: column;
+    }
+    
+    .buttons {
+      flex-direction: column;
+    }
+  }

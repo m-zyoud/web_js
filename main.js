@@ -285,3 +285,6 @@ filteredTasks.forEach((task, index) => {
           document.getElementById('renameInput').select();
         }, 100);
       }
+      function confirmRename() {
+        const newName = document.getElementById('renameInput').value.trim();
+        if (!validateInput(newName)) return;

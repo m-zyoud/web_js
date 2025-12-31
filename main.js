@@ -297,3 +297,15 @@ filteredTasks.forEach((task, index) => {
         renameIndex = null;
         document.getElementById('renamePopup').style.display = 'none';
       }
+      function deleteDoneTasks() {
+        const doneCount = tasks.filter(task => task.done).length;
+        if (doneCount === 0) {
+          alert(getText('noDoneTasks'));
+          return;
+        }
+        confirmPopup(() => {
+          tasks = tasks.filter(task => !task.done);
+          saveToStorage();
+          renderTasks();
+        }, getText('deleteDoneConfirm', { count: doneCount }));
+      }

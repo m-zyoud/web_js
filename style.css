@@ -297,3 +297,13 @@ ul#taskList {
     z-index: 1000;
     backdrop-filter: blur(5px);
   }
+  .popup-content {
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 300px;
+    box-shadow: 0 20px 40px var(--shadow);
+    animation: popupOpen 0.3s ease;
+    color: var(--text-color);
+  }

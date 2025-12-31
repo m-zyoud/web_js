@@ -362,3 +362,15 @@ ul#taskList {
     padding: 50px 20px;
     font-size: 18px;
   }
+  .task-counter {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    text-align: right;
+  }

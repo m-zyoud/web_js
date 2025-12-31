@@ -345,3 +345,20 @@ ul#taskList {
     background: var(--primary-hover);
     transform: scale(1.05);
   }
+  .popup-content button:last-of-type {
+    background: #6c757d;
+    color: white;
+  }
+
+  .popup-content button:last-of-type:hover {
+    background: #545b62;
+    transform: scale(1.05);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 50px 20px;
+    font-size: 18px;
+  }

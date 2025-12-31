@@ -271,3 +271,8 @@ filteredTasks.forEach((task, index) => {
         saveToStorage();
         renderTasks();
       }
+      function deleteTask(index) {
+        tasks.splice(index, 1);
+        saveToStorage();
+        renderTasks();
+      }

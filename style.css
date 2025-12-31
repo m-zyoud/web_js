@@ -336,3 +336,12 @@ ul#taskList {
     font-weight: 600;
     transition: all 0.3s;
   }
+  .popup-content button:first-of-type {
+    background: var(--primary-color);
+    color: white;
+  }
+
+  .popup-content button:first-of-type:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+  }

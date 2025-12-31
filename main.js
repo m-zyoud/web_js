@@ -276,3 +276,12 @@ filteredTasks.forEach((task, index) => {
         saveToStorage();
         renderTasks();
       }
+      function renameTask(index) {
+        renameIndex = index;
+        document.getElementById('renameInput').value = tasks[index].text;
+        document.getElementById('renamePopup').style.display = 'flex';
+        setTimeout(() => {
+          document.getElementById('renameInput').focus();
+          document.getElementById('renameInput').select();
+        }, 100);
+      }

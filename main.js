@@ -258,3 +258,11 @@ filteredTasks.forEach((task, index) => {
                 const text = input.value.trim();
                 if (!validateInput(text)) return;
                   tasks.push({ text, done: false });
+                  input.value = '';
+    saveToStorage();
+    renderTasks();
+    input.style.background = currentTheme === 'dark' ? '#2d5a2d' : '#d4edda';
+    setTimeout(() => {
+    input.style.background = '';
+    }, 500);
+    }

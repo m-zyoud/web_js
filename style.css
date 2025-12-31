@@ -391,6 +391,7 @@ ul#taskList {
     margin-right: 0;
     margin-left: 16px;
   }
+  
   /* Responsive Design */
   @media (max-width: 600px) {
     .container {
@@ -415,7 +416,7 @@ ul#taskList {
       flex-direction: column;
     }
   }
-  
+
   /* Storage indicator */
   .storage-indicator {
     position: fixed;

@@ -266,3 +266,8 @@ filteredTasks.forEach((task, index) => {
     input.style.background = '';
     }, 500);
     }
+    function toggleTask(index) {
+        tasks[index].done = !tasks[index].done;
+        saveToStorage();
+        renderTasks();
+      }

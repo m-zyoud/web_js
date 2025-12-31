@@ -415,6 +415,7 @@ ul#taskList {
       flex-direction: column;
     }
   }
+  
   /* Storage indicator */
   .storage-indicator {
     position: fixed;

@@ -286,3 +286,153 @@ ul#taskList {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
 }
+/* Popups */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--popup-overlay);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+  .popup-content {
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 300px;
+    box-shadow: 0 20px 40px var(--shadow);
+    animation: popupOpen 0.3s ease;
+    color: var(--text-color);
+  }
+  @keyframes popupOpen {
+    from { opacity: 0; transform: scale(0.8) translateY(-20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  #renamePopup input {
+    padding: 14px;
+    margin: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--container-bg);
+    color: var(--text-color);
+  }
+  #renamePopup input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+
+  .popup-content button {
+    margin: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  .popup-content button:first-of-type {
+    background: var(--primary-color);
+    color: white;
+  }
+
+  .popup-content button:first-of-type:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+  }
+  .popup-content button:last-of-type {
+    background: #6c757d;
+    color: white;
+  }
+
+  .popup-content button:last-of-type:hover {
+    background: #545b62;
+    transform: scale(1.05);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 50px 20px;
+    font-size: 18px;
+  }
+  
+  .task-counter {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    text-align: right;
+  }
+  [dir="rtl"] .task-item {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+  }
+
+  [dir="rtl"] .task-item.done {
+    border-right-color: var(--success-color);
+  }
+
+  [dir="rtl"] .task-item:hover {
+    transform: translateX(-4px);
+  }
+
+  [dir="rtl"] .task-item input[type="checkbox"] {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      margin: 10px;
+      padding: 20px;
+    }
+    
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .controls {
+      justify-content: center;
+    }
+    
+    .input-section {
+      flex-direction: column;
+    }
+    
+    .buttons {
+      flex-direction: column;
+    }
+  }
+
+  /* Storage indicator */
+  .storage-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: var(--success-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1001;
+  }
+
+  .storage-indicator.show {
+    opacity: 1;
+  }

@@ -228,3 +228,16 @@ filteredTasks.forEach((task, index) => {
     const editBtn = document.createElement('button');
     editBtn.innerHTML = '✏️';
     editBtn.title = currentLanguage === 'ar' ? 'تعديل المهمة' : 'Edit task';
+    editBtn.onclick = () => renameTask(originalIndex);
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerHTML = '🗑️';
+  deleteBtn.title = currentLanguage === 'ar' ? 'حذف المهمة' : 'Delete task';
+  deleteBtn.onclick = () => confirmPopup(() => deleteTask(originalIndex), getText('deleteTask'));
+   actions.appendChild(editBtn);
+   actions.appendChild(deleteBtn);
+      li.appendChild(checkbox);
+      li.appendChild(text);
+      li.appendChild(actions);
+      list.appendChild(li);
+      });
+    } 

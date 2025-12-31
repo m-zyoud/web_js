@@ -241,3 +241,11 @@ filteredTasks.forEach((task, index) => {
       list.appendChild(li);
       });
     } 
+    function updateTaskCounter(count) {
+        const counter = document.getElementById('taskCounter');
+        const totalTasks = tasks.length;
+        const doneTasks = tasks.filter(t => t.done).length;   
+        if (currentFilter === 'all') {
+          counter.textContent = getText('totalTasks', { total: totalTasks, done: doneTasks });
+          } else if (currentFilter === 'done') {
+          counter.textContent = getText('completedTasks', { count });

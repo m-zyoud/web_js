@@ -253,3 +253,8 @@ filteredTasks.forEach((task, index) => {
             counter.textContent = getText('pendingTasks', { count });
             }
             }
+            function addTask() {
+                const input = document.getElementById('taskInput');
+                const text = input.value.trim();
+                if (!validateInput(text)) return;
+                  tasks.push({ text, done: false });

@@ -362,6 +362,7 @@ ul#taskList {
     padding: 50px 20px;
     font-size: 18px;
   }
+  
   .task-counter {
     text-align: center;
     color: var(--text-muted);
@@ -391,7 +392,7 @@ ul#taskList {
     margin-right: 0;
     margin-left: 16px;
   }
-  
+
   /* Responsive Design */
   @media (max-width: 600px) {
     .container {

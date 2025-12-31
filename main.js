@@ -249,3 +249,7 @@ filteredTasks.forEach((task, index) => {
           counter.textContent = getText('totalTasks', { total: totalTasks, done: doneTasks });
           } else if (currentFilter === 'done') {
           counter.textContent = getText('completedTasks', { count });
+        } else {
+            counter.textContent = getText('pendingTasks', { count });
+            }
+            }

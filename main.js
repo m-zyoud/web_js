@@ -288,3 +288,12 @@ filteredTasks.forEach((task, index) => {
       function confirmRename() {
         const newName = document.getElementById('renameInput').value.trim();
         if (!validateInput(newName)) return;
+        tasks[renameIndex].text = newName;
+        saveToStorage();
+        renderTasks();
+        closeRenamePopup();
+      }
+      function closeRenamePopup() {
+        renameIndex = null;
+        document.getElementById('renamePopup').style.display = 'none';
+      }
